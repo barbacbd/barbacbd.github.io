@@ -1,0 +1,151 @@
+nav {
+    margin: 27px auto 0;
+    position: fixed;
+    /* Width is the total of the children below */
+    width: 610px;
+    height: 50px;
+    background-color: #2a4969;
+    border-radius: 8px;
+    font-size: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav a {
+    line-height: 50px;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+  }
+  nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+  }
+  /********************************************
+   * There needs to be an entry for each option
+   * below (child) for each of the menu options
+  ********************************************/
+  a:nth-child(1) {
+    width: 100px;
+  }
+  a:nth-child(2) {
+    width: 110px;
+  }
+  a:nth-child(3) {
+    width: 120px;
+  }
+  a:nth-child(4) {
+    width: 140px;
+  }
+  a:nth-child(5) {
+    width: 140px;
+  }
+  /********************************************
+   * There needs to be an entry for each option
+   * below (child) for each of the menu options
+  ********************************************/
+  nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: #1abc9c;
+  }
+  nav .start-about, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: #1abc9c;
+  }
+  nav .start-contact, a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 210px;
+    background-color: #1abc9c;
+  }
+  nav .start-personal, a:nth-child(4):hover~.animation {
+    width: 140px;
+    left: 330px;
+    background-color: #1abc9c;
+  }
+  nav .start-education, a:nth-child(5):hover~.animation {
+    width: 140px;
+    left: 470px;
+    background-color: #1abc9c;
+  }
+  
+  body {
+    font-size: 12px;
+    font-family: sans-serif;
+    /* background: #2c3e50; */
+    background-image: url("jeremy-bishop--FKhxUvwImw-unsplash.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    text-align: center;
+    margin: 40px 0 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #ecf0f1;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Cherry Swash', cursive;
+  }
+  
+  p {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: #ecf0f1;
+      font-family: 'Cherry Swash',cursive;
+      font-size: 16px;
+  }
+  
+  span {
+      color: #2BD6B4;
+  }
+
+  .aboutme {
+    float: left;
+    width: 45%;
+    padding: 100px;
+    padding-left:70px;
+    padding-right: 70px;
+    height: 250px;
+    margin:30px;
+    margin-right:30px;
+    margin-bottom: 70px;
+    line-height:2;
+    color: black;
+    background-color: #ecf0f1;
+  }
+
+  .aboutme-image {
+      background: url("barbacbd.png");
+      background-size: cover;
+      background-position: center;
+  }
+
+  .education {
+    float: left;
+    width: 45%;
+    padding: 100px;
+    padding-left:70px;
+    padding-right: 70px;
+    height: 475px;
+    margin:30px;
+    margin-right:30px;
+    margin-bottom: 70px;
+    line-height:2;
+    color: black;
+  }
+
