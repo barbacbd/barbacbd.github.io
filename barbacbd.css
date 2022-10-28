@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url("/home/bbarbach/personal/barbacbd.github.io/alexander-andrews-yOIT88xWkbg-unsplash.jpg");
+    background: url("./alexander-andrews-yOIT88xWkbg-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
