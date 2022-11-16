@@ -9,114 +9,166 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    background: url("./halo-dark-clouds-d9cgeojpb60w37x1.jpg") no-repeat center center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
+:root {
+    --primColor: #dcdcdc;
+    --secoColor: #555555;
+    --cornerRad: 4px;
+  }
+  body {
+    background-color: var(--primColor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+
+h1, h2 {
+    font-family: "Signika", sans-serif;
+    font-weight: 600;
 }
 
-.wrapper .sidebar{
-    background: rgb(178, 182, 182);
-    background:rgba(255,255,255,0.3);
+h1 {
+    font-size: 36px;
+    line-height: 46px;
+    color: #e0e0e0;
+    padding-bottom: 40px;
+}
+
+/*
+ * The following section is specific to the Navigation Bar.
+ * The data was pulled and modified from the original found here:
+ * https://github.com/sixrevisions/fixed-navigation-bar
+ */
+
+.fixed-nav-bar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100%;
-    /* padding: 20px 0; */
-    transition: all 0.5s ease;
-}
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    background-color: #00a087;
+  }
+  
+  /* The element at the top of the page right after the fixed navigation bar
+     MUST have sufficient top margin or else it will be covered by the bar */
+  .content {
+    margin-top: 20px;
+  }
+  
+  /* Example responsive navigation menu  */
+  .fixed-nav-bar li, .fixed-nav-bar a { 
+    height: 50px;
+    line-height: 50px;
+  }
+  .menu {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .menu a, .menu a:visited {
+    color: #ffffff;
+  }
+  .menu a:hover, .menu a:target {
+    color: #ebebeb;
+  }
+  .menu-items {
+    display: inline-block;
+  }
+  .sitename {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .menu-items li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .menu-items a {
+    text-decoration: none;
+  }
+  .show, .hide {
+    display: none;
+    padding-left: 15px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: #dde1e2;
+  }
+  .show {
+    background-image: url(down-arrow-icon.png);
+  }
+  .hide {
+    background-image: url(up-arrow-icon.png);
+  }
+  
+  @media only screen and (max-width: 980px) {
+    .menu { 
+      position: relative;
+      width: 100%;
+    }
+    .sitename {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      margin-left: 0px;
+    }
+    .menu-items {
+      display: none; 
+      width: 100%;
+      margin-top: 50px;
+      background-color: #008378;
+    }
+    .menu-items li {
+      display: block;
+      text-align: center;
+    }
+    .show, .hide {  
+      position: absolute;
+      top: 0;
+      right: 15px;
+    }
+    .show {
+      display: inline-block;
+    }
+    .hide {
+      display: none;
+    }
+    #menu:target .show {
+      display: none;
+    }
+    #menu:target .hide, #menu:target .menu-items {
+      display: inline-block;
+    }
+  }
+  
+  @media only screen and (max-width: 220px) {
+    .sitename, .show, .hide {
+      font-size: 14px;
+    }
+  }
 
-.wrapper .sidebar .profile{
-    margin-bottom: 30px;
+/*
+ * Form the main sections of the portfolio
+ */
+.home {
+    background: url("./background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    /* max-width: 100%;
+    max-height: 70%; */
+    background-repeat: no-repeat;
+    color: white;
+}
+.description {
+    padding-top: 100px;
+    min-height: 500px;
     text-align: center;
 }
 
-.wrapper .sidebar .profile img{
+.home .description p img{
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin: 0 auto;
 }
-
-.wrapper .sidebar .profile h3{
-    color: #ffffff;
-    margin: 5px 0 5px;
-}
-
-.wrapper .sidebar .profile p{
-    color: rgb(206, 240, 253);
-    font-size: 14px;
-}
-
-.wrapper .sidebar ul li a{
-    display: block;
-    padding: 13px 30px;
-    border-bottom: 1px solid #10558d;
-    color: rgb(241, 237, 237);
-    font-size: 16px;
-    position: relative;
-    /* text-align: center; */
-}
-
-.wrapper .sidebar ul li a .icon{
-    color: #dee4ec;
-    width: 20px;
-    display: inline-block;
-}
-
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active{
-    color: #0c7db1;
-    background:white;
-    border-right: 2px solid rgb(5, 68, 104);
-}
-
-.wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon{
-    color: #0c7db1;
-}
-
-.wrapper .sidebar ul li a:hover:before,
-.wrapper .sidebar ul li a.active:before{
-    display: block;
-}
-
-
-
-/* .wrapper .section{
-    width: calc(100% - 225px);
-    margin-left: 200px;
-    transition: all 0.5s ease;
-} */
-
-/* .wrapper .section .top_navbar{
-    background: rgb(7, 105, 185);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-
-} */
-
-/* .wrapper .section .top_navbar .hamburger a{
-    font-size: 28px;
-    color: #f4fbff;
-}
-
-.wrapper .section .top_navbar .hamburger a:hover{
-    color: #a2ecff;
-}
-
-
-body.active .wrapper .sidebar{
-    left: -225px;
-}
-
-body.active .wrapper .section{
-    margin-left: 0;
-    width: 100%;
-} */

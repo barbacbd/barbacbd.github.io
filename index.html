@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 <head>
     <meta charset="UTF-8">
     <!-- Still workshopping the display name -->
@@ -10,182 +10,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<!-- <h1 id="home">Brent Barbachem</h1> -->
+<body>
 
-<!-- <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <a href="#personal">Personal</a>
-  <a href="#education">Education</a>
-  <div class="animation start-home"></div>
-</nav> -->
+    <nav class="fixed-nav-bar">
+        <div id="menu" class="menu">
+          <a class="sitename" href="https://github.com/barbacbd/">Brent Barbachem</a>
+          <!-- Example responsive navigation menu  -->
+          <a class="show" href="#menu">Menu</a><a class="hide" href="#hidemenu">Menu</a>
+          <ul class="menu-items">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#development">Development</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#articles">Articles</a></li>
+        </ul>
+        </div>
+      </nav>
 
-<body id="home">
+      <section class="home" id="home">
+          <div class="description">
+              <h1>Brent Barbachem</h1>
+              <p>
+                  <img src="./barbacbd.png">
+              </p>
+          </div>
+      </section>
 
-    <div class="wrapper">
-
-        <div class="sidebar">
-
+    <!-- <div class="wrapper" id="wrapper" >
+        <div id="sidebar" class="sidebar">
             <div class="profile">
                 <img src="./barbacbd.png" alt="profile_picture">
                 <h3>Brent Barbachem</h3>
                 <p>Software Engineer</p>
             </div>
+            <ul id="ulsidebar">
+                <li id="home" class="lisidebar"><a id="home" href="#home"><span class="icon"><i class="fas fa-home"></i></span><span class="item">Home</span></a></li>
+                <li id="about" class="lisidebar"><a id="about" href="#about"><span class="icon"><i class="fas fa-user"></i></span><span class="item">About Me</span></a></li>
+                <li id="contact" class="lisidebar"><a id="contact" href="#contact"><span class="icon"><i class="fas fa-user-friends"></i></span><span class="item">Contact</span></a></li>
+                <li id="development" class="lisidebar"><a id="development" href="#development"><span class="icon"><i class="fas fa-desktop"></i></span><span class="item">Development</span></a></li>
+                <li id="education" class="lisidebar"><a id="education" href="#education"><span class="icon"><i class="fas fa-book"></i></span><span class="item">Education</span></a></li>
+                <li id="articles" class="lisidebar"><a id="articles" href="#articles"><span class="icon"><i class="fas fa-newspaper"></i></span><span class="item">Articles</span></a></li>
+            </ul> -->
+<!--                 <script type="text/javascript">
+    $(document).ready(function(){
+        $("ul>li>a").click(function() {
+            alert($(this).attr("id"));
+        });
+    });
+    </script> -->
 
-            <ul>
-
-                <li>
-                    <a href="#home">
-                        <span class="icon"><i class="fas fa-home"></i></span>
-                        <span class="item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <span class="icon"><i class="fas fa-user"></i></span>
-                        <span class="item">About Me</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact">
-                        <span class="icon"><i class="fas fa-user-friends"></i></span>
-                        <span class="item">Contact</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#development">
-                        <span class="icon"><i class="fas fa-desktop"></i></span>
-                        <span class="item">Development</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#education">
-                        <span class="icon"><i class="fas fa-book"></i></span>
-                        <span class="item">Education</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#articles">
-                        <span class="icon"><i class="fas fa-newspaper"></i></span>
-                        <span class="item">Articles</span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-
-    </div>
-
-</body>
-
-
-<!-- <div class="whole-bg">
-    <nav>
-        <h1>Brent Barbachem</h1>
-        <ul class="navigation">
-            <li><a href="#about" class="nav-link">About</a></li>
-          </ul>
-          <button class="burger-menu" id="burger-menu">
-            <ion-icon class="bars" name="menu-outline"></ion-icon>
-          </button>
-    </nav>
-    <div class="header">
-        <a href="https://github.com/barbacbd">
-            <img 
-                src="barbacbd.png" 
-                width="150px" 
-                height="150px"
-                vertical-align="middle"
-            >
-        </a>
+        <!-- </div>
     </div> -->
-    <!-- <div class="aboutme">
-        <div class="aboutme-child">
-            <h2>About me</h2>
-            <p>
-                Brent enjoys programming, surfing, rock climbing, and essentially any activity that 
-                means time outdoors with family and friends. The majority of Brent's personal programming
-                projects are driven by this passion for nature. 
-            </p>
-            <p>
-                Brent is currently employed by Red Hat as a software engineer on the Openshift Installer team. Brent 
-                previsouly spent time developing autonomous surface vessels and naval communication systems. 
-            </p>
-            <p>
-                Brent was the lead developer for an autonomous surface vessel that traveled from Pensacola, FL to
-                Norfolk, VA without any human intervention. The trip set numerous records for fastest and longest
-                routes conducted by an autonomous surface vessel. Brent was also the lead software engineer on the 
-                same project that autonomously traveled from Mobile, AL to San Diego, CA. 
-            </p>
-        </div>
-        <div>
-            <h2>Contact</h2>
-            <div class="linkedin-icon">
-                <a href="https://www.linkedin.com/in/brent-barbachem">
-                    <img src="linkedin.png" width="25px" height="25px">
-                </a>
-            </div>
-            <div class="linkedin-icon">
-                <a href="https://www.github.com/barbacbd">
-                    <img src="github.png" width="25px" height="25px">
-                </a>
-            </div>
-            <div class="linkedin-icon">
-                <a href="barbacbd@dukes.jmu.edu">
-                    <img src="email.png" width="25px" height="25px">
-                </a>
-            </div>
-        </div> -->
 
-    <!-- </div> -->
-    
-    <!--
-    <div class="education">
-        <h2>Education</h2>
-        <div class="aligned">
-            <a href="https://www.jmu.edu/cise/cs/index.shtml">
-                <img 
-                src="jmu.png" 
-                alt="James Madison University"
-                width="100px" 
-                height="100px"
-                vertical-align="middle"
-                float="left"
-            >            
-            </a>
-    
-            <span style="">
-                I gradeuated from James Madison University in May 2014 with a 
-                B.S. in Computer Science. The studies were focused on Systems
-                Development, Security, and integrating software engineering with
-                my passion for Geography. 
-            </span>
-    
-        </div>
-    
-        <div class="aligned">
-            <a href="https://www.odu.edu/cmse">
-                <img 
-                src="odu.png" 
-                alt="Old Dominion University"
-                width="100px" 
-                height="100px"
-                vertical-align="middle"
-                float="left"
-            >            
-            </a>
-    
-            <span style="">
-                I gradeuated from Old Dominion University in May 2016 with an 
-                M.E. in Modeling Simulation and Visualization Engineering.
-            </span>
-    
-        </div>
-    
-    </div>
-    -->
-<!-- </div> -->
+    <!-- <div class="sections" id="about">
 
+        <p> Hi, I'm Brent. I studied computer science at JMU with a focus on systems development.
+            I was fascinated with Operating Systems and their creators. I gravitated towards
+            Red Hat, and in the spring of 2022 I jumped at the opportunity to work for Red Hat. I currently
+            work on openshift as a member of the installer/openshift ansible team. I specialize in golang
+            development for the Google Cloud Platform and python/bash development for Ansible with the Openshift 
+            Installer. 
+        </p>
+        <br>
+        <p> I spent five years with a startup (eventually bought by a large corporation) developing autonomous
+            surface vessels. Surface Vessels? Yes, that is correct, I worked on autonomous boats. The work included
+            boats from four feet long to 200+ feet long where the swarm size was one to five. 
+        </p>
+        <br>
+        <p> I have three years of experience developing Naval communication systems. These systems included runtimes 
+            of at least one year with a 99.7% minimum runtime availability. My first professional development 
+            experience included a massive distributed (federated) simulation environment. 
+        </p>
+        <br>
+        <p> Life isn't only defined by your contributions at work. I enjoy spending my time outside with family and 
+            friends. I love surfing, soccer, and rock climbing. If you ask my wife, she would say I am overly
+            invested in fantasy sports. I enjoy the probability and statistical features of fantasy sports. If I'm not 
+            home, you can find me at the beach. My personal programming experience draws from my love of nature and sports. 
+        </p>
+    </div> -->
+<!--     <div class="sections" id="contact">
+
+    </div> -->
+<!--     <div class="sections" id="education">
+        <p> I graduated from James Madison University in 2014 with a B.S. in Computer Science. I focused on systems development, 
+            computer security, and geography. 
+        </p>
+     file:///home/bbarbach/personal/barbacbd.github.io/index.html#education   <br>
+        <p> I graduated from Old Dominion University in 2016 with a M.E. in Modeling Simulation and Visualization Engineering. 
+        </p>
+    </div> -->
+
+<!-- </body>
+<script type="text/javascript">
+    var list = document.getElementsByClassName("lisidebar");
+    function Alert(){
+        // console.log(this.id);
+        // alert(this.id);
+        console.log("HERE");
+    }
+
+    for(i = 0; i < list.length; i++) {
+        console.log(list[i]);
+        list[i].addEventListener("click", function(e){
+            e.preventDefault();
+            console.log("HERE");
+        });
+    } -->
 
 </html>
