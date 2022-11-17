@@ -196,40 +196,21 @@ h2 {
     text-align: center;
 }
 
-.side-by-side {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.contact-data {
-    display: inline;
-    vertical-align: middle;
-    text-align: center;    
-    position: relative;
-    width: 150px;
-    height: 75px;
-}
-
-.contact-data img {
+.round-image {
     display: block;
     width: 75px;
     height: 75px;
     border-radius: 50%;
     margin: 0 auto;
 }
-.contact-data .title {
-    color: rgb(241, 93, 93);
-    font-size: 10px;
-}
-.contact-data .my-data {
-    font-size: 10px;
-    color:rgb(0, 0, 0);
-    text-decoration: underline;
-    text-decoration-color: #008378;
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.education-data {
+.section-data {
     display: inline;
     vertical-align: middle;
     text-align: center;    
@@ -238,14 +219,31 @@ h2 {
     height: 75px;
 }
 
-.education-data img {
-    display: block;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    margin: 0 auto;
+/*
+ * Heading is used above an image. The heading contains slightly larger
+ * text than the title.
+ */
+.section-data .heading {
+    color: rgb(241, 93, 93);
+    font-size: 16px;
 }
-.education-data .my-data {
-    font-size: 10px;
+
+/*
+ * Title appears under an image unlike the heading.
+ */
+.section-data .title {
+    color: rgb(241, 93, 93);
+    font-size: 12px;
+}
+
+.section-data .details {
+    font-size: 12px;
     color:rgb(0, 0, 0);
+}
+
+.section-data .underlined-data {
+    font-size: 12px;
+    color:rgb(0, 0, 0);
+    text-decoration: underline;
+    text-decoration-color: #008378;
 }
