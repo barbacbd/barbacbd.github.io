@@ -247,3 +247,37 @@ h2 {
     text-decoration: underline;
     text-decoration-color: #008378;
 }
+
+/*
+ * CSS information for the button on the main page
+ */
+.button, .button:visited, .button-dark {
+  display: inline-block;
+  max-width: 200px;
+  margin: 50px 10px 30px 10px;
+  padding: 10px;
+  font-family: "Signika", sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  text-transform: capitalize;
+  text-align: center;
+  transition: all 0.1s ease;
+}
+.button-dark, .button-dark:visited {
+  margin: 20px 10px 30px 0;
+  color: #464646;
+  border-color: #464646;
+
+}
+.button:hover, .button-dark:hover {
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.button-dark:hover {
+  color: #ffffff;
+  background-color: rgba(70, 70, 70, 0.9);
+}
