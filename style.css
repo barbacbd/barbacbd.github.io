@@ -22,29 +22,36 @@ body {
     background: url("./background.jpg") no-repeat center center fixed;
     background-size: cover;
     background-repeat: no-repeat; 
-    /* font-family: Lato, sans-serif; */
     font-family: 'Courier New', Courier, monospace;
 }
 
-section {
+.section {
   display: flex;
-  min-height: 100vh;
+  justify-content: space-between;
 }
 
+/* Left is the sidebar on the left */
+
+
 .left {
-  flex: 1;
+  padding-top: 3%;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 3%;
+  width: 50%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 50vh;
 }
 
 
 .right {
-  flex: 1;
+  padding-top: 3%;
   padding-left: 3%;
   padding-right: 15%;
-  padding-top: 3%;
-  
+  overflow: scroll;
+  width: 50%;
+  height: 100vh;
 }
 
 
@@ -78,7 +85,7 @@ p {
   font-size: 16px;
 }
 
-.right .about ol li {
+ol li {
   text-align: center;
   color: white;
   font-size: 16px;
@@ -135,11 +142,15 @@ p {
   transform-origin: left;
 }
 
+.nav ul li a.active {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* The icons are used for contact icons only */
 
 .contact {  
   display: flex;
-  /* justify-content: space-around; */
   padding-top: 25%;
   padding-bottom: 3%;
 }
@@ -161,6 +172,7 @@ p {
 
 .right-section {
   padding-top: 10%;
+  scroll
 }
 
 .selection-group {
@@ -232,5 +244,5 @@ p {
   font-weight: bold;
   font-size: 18px;
   color: rgb(219, 219, 219);
-  
+
 }
