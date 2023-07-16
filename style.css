@@ -151,6 +151,7 @@ ol li {
 
 .contact {  
   display: flex;
+  /* justify-content: space-around; */
   padding-top: 25%;
   padding-bottom: 3%;
 }
@@ -172,7 +173,6 @@ ol li {
 
 .right-section {
   padding-top: 10%;
-  scroll
 }
 
 .selection-group {
@@ -245,4 +245,27 @@ ol li {
   font-size: 18px;
   color: rgb(219, 219, 219);
 
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.styled-table thead tr {
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    font-size: 12px;
+    color: rgb(219, 219, 219);
 }
